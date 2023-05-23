@@ -26,6 +26,7 @@ jobs:
       run: dotnet test --no-restore --verbosity normal --logger trx --results-directory "TestResults" /P:CollectCoverage=true /p:CollectOutputFormat=opencover
     - name: Codecov
       uses: codecov/codecov-action@v2
+      if: always()
       with:
         flags: unittests
         name: codecov-umbrella
