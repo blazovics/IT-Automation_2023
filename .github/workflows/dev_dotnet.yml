@@ -23,7 +23,7 @@ jobs:
     - name: Build
       run: dotnet build --no-restore --configuration Release
     - name: Test
-      run: dotnet test --no-restore --verbosity normal --logger trx --results-directory "TestResults" /P:CollectCoverage=true /p:CollectOutputFormat=opencover
+      run: dotnet test --no-restore --verbosity normal --logger trx --results-directory "TestResults" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
     - name: Codecov
       uses: codecov/codecov-action@v2
       if: always()
