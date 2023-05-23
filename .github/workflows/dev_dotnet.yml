@@ -24,6 +24,13 @@ jobs:
       run: dotnet build --no-restore --configuration Release
     - name: Test
       run: dotnet test --no-restore --verbosity normal --logger trx --results-directory "TestResults" /P:CollectCoverage=true /p:CollectOutputFormat=opencover
+    - name: Codecov
+      uses: codecov/codecov-action@v2
+      with:
+        flags: unittests
+        name: codecov-umbrella
+        fail_ci_if_error: true
+        verbose: true
     - name: Publish Test 
       uses: dorny/test-reporter@v1.6.0
       if: always()
