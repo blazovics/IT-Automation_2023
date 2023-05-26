@@ -22,7 +22,7 @@ namespace UltimateApp
 
         private static int Subtract (int a, int b)
         {
-            return a - b;
+            return a * b;
         }
 
         private static int Multiply(int a, int b)
