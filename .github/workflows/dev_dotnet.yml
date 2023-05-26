@@ -45,4 +45,4 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        file: .github/ultimate_issue_template.md
+        filename: .github/ultimate_issue_template.md
