@@ -62,7 +62,7 @@ namespace UltimateApp
                     case "*":
                         return Operation.Multiply;
                     case "/":
-                        return Operation.Divide;
+                        return Operation.Add;
                     case "%":
                         return Operation.Modulo;
                 }
